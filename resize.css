@@ -1,0 +1,62 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(0, 122, 255, 0.1);
+    color: #007AFF;
+}
+
+.nav-link.active {
+    background: #007AFF;
+    color: white;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.dimension-input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 0 8px;
+}
+
+.lock-aspect {
+    margin-left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lock-aspect input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+#originalDimensions, #resizedDimensions {
+    color: #666;
+    font-size: 14px;
+    margin-top: 8px;
+} 

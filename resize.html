@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片尺寸调整</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resize.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-link">图片压缩</a>
+        <a href="resize.html" class="nav-link active">尺寸调整</a>
+    </nav>
+    
+    <div class="container">
+        <div class="upload-area" id="uploadArea">
+            <img src="assets/resize-icon.svg" alt="上传图标" class="upload-icon">
+            <p>点击或拖拽图片到这里</p>
+            <p class="upload-hint">支持jpg、png、webp等格式</p>
+            <input type="file" id="fileInput" accept="image/*" hidden>
+        </div>
+        
+        <div class="preview-area" id="previewArea" style="display: none;">
+            <div class="image-container">
+                <div class="original">
+                    <h3>原始图片</h3>
+                    <img id="originalImage">
+                    <p id="originalSize"></p>
+                    <p id="originalDimensions"></p>
+                </div>
+                <div class="resized">
+                    <h3>调整后</h3>
+                    <img id="resizedImage">
+                    <p id="resizedDimensions"></p>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label>
+                        宽度：
+                        <input type="number" id="widthInput" min="1" class="dimension-input">
+                        px
+                    </label>
+                    <label class="lock-aspect">
+                        <input type="checkbox" id="lockAspect" checked>
+                        锁定宽高比
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label>
+                        高度：
+                        <input type="number" id="heightInput" min="1" class="dimension-input">
+                        px
+                    </label>
+                </div>
+                <div class="control-group">
+                    <label>
+                        输出格式：
+                        <select id="formatSelect">
+                            <option value="jpeg">JPEG</option>
+                            <option value="png">PNG</option>
+                            <option value="webp">WebP</option>
+                        </select>
+                    </label>
+                </div>
+                <button id="downloadBtn" class="download-btn">下载调整后的图片</button>
+            </div>
+        </div>
+    </div>
+    <script src="resize.js"></script>
+</body>
+</html> 
